@@ -31,11 +31,11 @@ describe Van do
 # end
 
 
-# it 'should not accept a bike if it\'s full' do
-#   fill_van van
+ it 'should not accept a bike if it\'s full' do
+  fill_van van
 
-#   expect{van.transport(bike)}.to raise_error 'Station is full'
-# end
+  expect{van.transport(bike)}.to raise_error 'Station is full'
+ end
 
 
 
