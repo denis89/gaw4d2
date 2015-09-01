@@ -28,9 +28,9 @@ describe Van do
    expect(van.bike_count).to be 1
  end
 
-# it 'should be able to move fixed bikes to the docking station' do
-#   expect(van.move_fixed_bikes).to be true
-# end
+ it 'should be able to move fixed bikes to the docking station' do
+   expect{van.docking_station_count(bike)}.to be 1
+ end
 
 
  it 'should not accept a bike if it\'s full' do

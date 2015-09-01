@@ -20,17 +20,18 @@ class Van
     @garage.count
   end
 
-  def docking_station_count
-    @docking_station.count
+  def docking_station_count bike
+    @bikes << bike
+   
   end
 
   #def move_fixed_bikes
   #  @bikes.select { |bike|# bike.broken? }
   #end
 
-  def van_count
-    @bikes.count
-  end
+ #def van_count
+ #  @bikes.count
+  #end
 
   def full?
     bike_count == @capacity
