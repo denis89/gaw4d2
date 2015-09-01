@@ -9,7 +9,7 @@ describe Van do
   let(:bike) { Bike.new }
 
     def fill_van van
-    10.times { van.transport(Van.new) }
+    10.times { van.transport(Bike.new) }
     end
 
     it 'should be empty after we build it' do
@@ -22,9 +22,11 @@ describe Van do
     expect(van.full?).to be true
    end
 
-# it 'should be able to move broken bikes to the garage' do
-#   expect(van.move_broken_bikes).to be true
-# end
+ it 'should be able to move broken bikes to the garage' do  
+   van.move_broken_bikes(bike)
+
+   expect(van.bike_count).to be 1
+ end
 
 # it 'should be able to move fixed bikes to the docking station' do
 #   expect(van.move_fixed_bikes).to be true
